@@ -14,10 +14,13 @@
  - TabNet
  - LSTM
  - StratifiedGroupKfoldとGroupKFold
+ - nb004のモデルで、LGBMRegressorとかと比べて精度の差は？
 
 ## LOG
 ### 20210320
  - ### nb003
+ 　- CV:0.598351
+ 　- LB:0.554372
  - gitの使い方を間違えreadme消えた...はあ...
  - histplotって対数変換してくれるんだ
  - SumLightとMeanLightで面積分かりそう
@@ -36,4 +39,9 @@
  - ### nb004
  - goupbyオブジェクトはreset_index()でDataFrameに戻る
  - StratifiedGroupKfoldとGroupKFoldどっちがよいのだ
- - 
+
+### 20210322
+ - ### nb004続き
+ - LGBMRegressorとかCatBoostRegressorじゃないけど何が違うんだ？
+  - パラメータでregression指定すれば結局いっしょなのかな？
+ - docker-composeでgpu有効にしていなかった。でもどうやってやるのだ・・・
