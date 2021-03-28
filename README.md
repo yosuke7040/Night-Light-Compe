@@ -5,6 +5,14 @@
 |---|----|
 |1|[宇宙教育教材「JAXA オリジナル Google Earth Engine Apps 集](https://edu.jaxa.jp/news/2020/i-0315.html)|
 |2|[低所得国における夜間光と社会・経済指標の相関関係](https://dept.sophia.ac.jp/econ/econ_cms/wp-content/uploads/2016/11/62-2.pdf)|
+|3|[条件付き生成アドバーサリア・ネットワークを用いた中解像度衛星画像のセマンティック・セグメンテーション](https://arxiv.org/pdf/2012.03093.pdf)|
+
+## Notebook
+|No.|Content|
+|---|----|
+|1|EDA|
+|4||
+|5|夜間光データから土地価格を予測 BaseLine(by mst8823)|
 
 ## TO DO
  - yearの影響が出やすい地域とそうでない地域の分類
@@ -45,3 +53,21 @@
  - LGBMRegressorとかCatBoostRegressorじゃないけど何が違うんだ？
   - パラメータでregression指定すれば結局いっしょなのかな？
  - docker-composeでgpu有効にしていなかった。でもどうやってやるのだ・・・
+
+### 20210328
+ - ### nb004続き
+ 　- CV:0.593936
+ 　- LB:0.769067
+ - 結局dockerでgpu有効にできませんでした！！！！つまり進捗0です！！！！ubuntuにするか～
+ - ### nb005
+   - CV:0.5286
+ 　- LB:0.564726
+ - LSTMのベースライン
+  - LSTMとは：ニューラルネットワークの１種.
+  - LSTM(Long Short Term Memory)は「忘却する・入力する・出力する」という３つのゲートで成り立っている
+ - round(f,1):fを小数点第一位まで丸める
+ - StandardScaler()するときは、trainにfit_transformして、testにはfitをせずtransformだけなのはなんでだったっけ・・・？何かで見た気がする
+ - PlaceIDのカウントが22だったら1992～2013までのデータが全部ある。全部そろってないのはそぎ落とすといいのか？
+ - pytorch何してんのかわかんねえな・・・
+ - ### mb006
+ - 
