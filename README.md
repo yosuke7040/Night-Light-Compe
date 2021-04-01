@@ -10,9 +10,13 @@
 ## Notebook
 |No.|Content|
 |---|----|
-|1|EDA|
-|4||
-|5|夜間光データから土地価格を予測 BaseLine(by mst8823)|
+|nb001|EDA|
+|nb002|EDA|
+|nb003|夜間光データから土地価格を予測ベースモデル(by cha_kabu)|
+|nb004|夜間光コンペ Baseline(xgb,lgb,cat)(by tubo)|
+|nb005|「夜間光データから土地価格を予測」のLSTMベースライン(by daikiclimate)|
+|nb006|夜間光データから土地価格を予測 BaseLine(by mst8823)|
+|nb007||
 
 ## TO DO
  - yearの影響が出やすい地域とそうでない地域の分類
@@ -24,6 +28,8 @@
  - StratifiedGroupKfoldとGroupKFold
  - nb004のモデルで、LGBMRegressorとかと比べて精度の差は？
  - カーネルPCA
+ - pivottableはfillna(0)しとくのがよいかも？
+ - スタッキングの参考になりそう[url](https://github.com/nyk510/atmacup10/blob/master/src/exp__027.py)
 
 ## LOG
 ### 20210320
@@ -79,8 +85,14 @@
  - pcaの使い方？
 
 ### 20210331
- - ### nb006
+ - ### nb006続き
  - dockerでgpuが認識されないのはワイだけじゃなかった・・・まますさんもだった・・・
  - コンペ終わったらやってみよう
  - 学習データとテストデータに同じPlaceIDがないためPCAによる次元削減することで分散表現チックに特徴量を得ることができるかもしれない
- - 
+
+### 20210401
+ - ### nb006続き
+ 　- CV:0.5341
+ 　- LB:0.491471
+ - returnの代わりにyield出てきた
+ - seedを何個か使って平均とっているの初めて見たな
