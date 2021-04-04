@@ -21,7 +21,7 @@
 ## TO DO
  - yearの影響が出やすい地域とそうでない地域の分類
  - areaが狭くても地価が高い土地も、低い土地も混在してるから区別できる特徴量が作れば強い？
-  - MeanLightとareaをbinningで順位つけてみる？areaが狭くてMeanLight(SumLgiht)が大きいのは栄えているはず
+  - SumLgihtとareaを順位つけてみる？areaが狭くてSumLgihtが大きいのは栄えているはず
   - これをtarget encoudingしてみてはどう？
  - TabNet
  - LSTM
@@ -65,8 +65,8 @@
 
 ### 20210328
 ### nb004続き
- 　- CV:0.593936
- 　- LB:0.769067
+  - CV:0.593936
+  - LB:0.769067
  - 結局dockerでgpu有効にできませんでした！！！！つまり進捗0です！！！！ubuntuにするか～
 ### nb005
    - CV:0.5286
@@ -94,8 +94,8 @@
 
 ### 20210401
 ### nb006続き
- 　- CV:0.5341
- 　- LB:0.491471
+  - CV:0.5341
+  - LB:0.491471
  - returnの代わりにyield出てきた
  - seedを何個か使って平均とっているの初めて見たな
 
@@ -107,4 +107,41 @@
 ### nb007続き
  - diffとかってlagって言い変えたりしてる
  - listにSeriesっぽい配列入ってたら、pd.concatでDataFrame化できるのね
- - 
+
+### 20210404
+### nb007続き
+  - CV:0.54312
+　- LB:0.606241
+ - キメラnotebookできた
+ - そしてLB低いな・・・
+### nb008
+  - CV:0.54467
+  - LB:
+ - キメラnotebookできた
+ - lagとshiftをrange(0,22)→range(-20,22)にしてみたがCV下がった・・・
+### nb009
+  - CV:0.54468
+ - 特徴量にランク入れてみた
+### nb010
+  - CV:0.54467
+ - pivotするときにNanは0にしてみる
+ - CVに変化なし
+### nb011
+  - CV:0.54097
+ - aggでskewなくした
+ - diff,shiftのrangeを0からにしてたから1からに
+ - param変更
+### nb012
+  - CV:0.54259(bin=100)
+  - CV:0.542833(bin=300)
+  - CV:0.54250(bin=500)
+  - CV:0.54297(Area:bin=500, SumLight:bin=1000)
+  - CV:0.54296(Area:bin=50, SumLight:bin=100)
+  - CV:0.54275(Area:bin=90, SumLight:bin=700)
+ - binning追加
+
+### 20210405
+
+ - target encorfingとGroupKFoldのrandom_stateを一致させような
+ - PlaceIDでpcaの対象増やしたいな
+ - 単体モデル
