@@ -138,10 +138,17 @@
   - CV:0.54297(Area:bin=500, SumLight:bin=1000)
   - CV:0.54296(Area:bin=50, SumLight:bin=100)
   - CV:0.54275(Area:bin=90, SumLight:bin=700)
+  - CV:0.54275(Area:bin=80, SumLight:bin=500)
  - binning追加
 
 ### 20210405
-
+### nb013
+ - CV:0.5374
  - target encorfingとGroupKFoldのrandom_stateを一致させような
  - PlaceIDでpcaの対象増やしたいな
  - 単体モデル
+ - aggを一番よかったやつに合わす？
+
+### nb014
+ - わけもわからずtarget encoding作ったな・・・
+ - groupkfoldで実装できなかったから、全部kfoldになっちまったが・・
